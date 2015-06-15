@@ -12,6 +12,7 @@
 	        */
 	        
 	        Connection conn = null;
+	        ResultSet rs=null;
     try
     {
       Class.forName("org.postgresql.Driver");
@@ -21,7 +22,7 @@
 	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
 	        stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
 	        stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
-	        ResultSet rs = stmt.executeQuery("SELECT * FROM logindetails");
+	        rs = stmt.executeQuery("SELECT * FROM logindetails");
     }
     catch (ClassNotFoundException e)
     {
