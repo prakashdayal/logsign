@@ -1,4 +1,4 @@
-<%@ page import="java.sql.*,java.net.URI,java.net.URISyntaxException,java.net.URLEncoder"  %>
+<%@ page import="java.sql.*,java.net.URI,java.util.*"  %>
 <html>
 <body>
 <h1> Thank You for Using our apps</h1>
