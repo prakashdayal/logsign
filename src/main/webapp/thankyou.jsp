@@ -3,13 +3,7 @@
 <body>
 <h1> Thank You for Using our apps</h1>
 <%
-             /*URI dbUri = new URI(System.getenv("DATABASE_URL"));
-
-	        String username = dbUri.getUserInfo().split(":")[0];
-	        String password = dbUri.getUserInfo().split(":")[1];
-	        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
-	        Connection connection = DriverManager.getConnection(dbUrl, username, password);
-	        */
+            
 	        
 	        Connection conn = null;
 	        ResultSet rs=null;
