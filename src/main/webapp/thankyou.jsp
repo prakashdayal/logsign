@@ -30,7 +30,7 @@ String pass1 = request.getParameter("password");
       System.exit(2);
     }
 	*/
-	URI dbUri = new URI(System.getenv("postgres://ckkyrhcwefetgz:pEHeAaHXoXx4nX2KlkHwcKwKKz@ec2-54-83-17-8.compute-1.amazonaws.com:5432/dcfvedpe24akom"));
+	URI dbUri = new URI("postgres://ckkyrhcwefetgz:pEHeAaHXoXx4nX2KlkHwcKwKKz@ec2-54-83-17-8.compute-1.amazonaws.com:5432/dcfvedpe24akom");
 
     String username = dbUri.getUserInfo().split(":")[0];
     String password = dbUri.getUserInfo().split(":")[1];
