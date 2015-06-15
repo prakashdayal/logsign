@@ -61,7 +61,7 @@ response.sendRedirect("/thankyou1.jsp");
 
 
 	            	}
-	            }
+	            
 %>
 
 </body>
