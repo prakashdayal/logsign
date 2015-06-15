@@ -53,7 +53,7 @@ String pass1 = request.getParameter("password");
 
 	        rs.next();
 	        if(rs.getString("id")==id1 && rs.getString("pass")==pass1)
-{
+{out.println("AAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBb");
 response.sendRedirect("/thankyou1");
 	            }
 %>
