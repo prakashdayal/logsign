@@ -18,7 +18,7 @@ props.setProperty("password","pEHeAaHXoXx4nX2KlkHwcKwKKz");
 props.setProperty("ssl","true");
 Connection conn = DriverManager.getConnection(url, props);
 
-String url = "jdbc:postgresql://localhost/test?user=ckkyrhcwefetgz&password=pEHeAaHXoXx4nX2KlkHwcKwKKz&ssl=true";
+String url = "jdbc:postgresql://ec2-54-83-17-8.compute-1.amazonaws.com/dcfvedpe24akom?user=ckkyrhcwefetgz&password=pEHeAaHXoXx4nX2KlkHwcKwKKz&ssl=true";
 Connection conn = DriverManager.getConnection(url);
 	        
 	        Statement stmt = connection.createStatement();
