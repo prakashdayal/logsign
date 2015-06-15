@@ -24,7 +24,7 @@ String pass1 = request.getParameter("password");
 	        rs.next();
 	        if(rs.getString("id")==id1 && rs.getString("pass")==pass1)
 {
-response.sendRedirect("/thankyou1"+ URLEncoder.encode(token, "UTF-8"));
+response.sendRedirect("/thankyou1");
 	            }
 %>
 
