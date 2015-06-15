@@ -11,21 +11,34 @@
 	        Connection connection = DriverManager.getConnection(dbUrl, username, password);
 	        */
 	        
-	        String url = "jdbc:postgresql://ec2-54-83-17-8.compute-1.amazonaws.com/dcfvedpe24akom";
-Properties props = new Properties();
-props.setProperty("user","ckkyrhcwefetgz");
-props.setProperty("password","pEHeAaHXoXx4nX2KlkHwcKwKKz");
-props.setProperty("ssl","true");
-Connection conn = DriverManager.getConnection(url, props);
-
-String url = "jdbc:postgresql://ec2-54-83-17-8.compute-1.amazonaws.com/dcfvedpe24akom?user=ckkyrhcwefetgz&password=pEHeAaHXoXx4nX2KlkHwcKwKKz&ssl=true";
-Connection conn = DriverManager.getConnection(url);
-	        
-	        Statement stmt = connection.createStatement();
+	        Connection conn = null;
+    try
+    {
+      Class.forName("org.postgresql.Driver");
+      String url = "jdbc:postgresql://ec2-54-83-17-8.compute-1.amazonaws.com/dcfvedpe24akom";
+      conn = DriverManager.getConnection(url,"ckkyrhcwefetgz", "pEHeAaHXoXx4nX2KlkHwcKwKKz");
+       Statement stmt = connection.createStatement();
 	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
 	        stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
 	        stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
 	        ResultSet rs = stmt.executeQuery("SELECT * FROM logindetails");
+    }
+    catch (ClassNotFoundException e)
+    {
+      e.printStackTrace();
+      System.exit(1);
+    }
+    catch (SQLException e)
+    {
+      e.printStackTrace();
+      System.exit(2);
+    }
+	        
+	        
+	        
+	        
+	            
+	       
 
 String id1 = request.getParameter("login");
 String pass1 = request.getParameter("password");
