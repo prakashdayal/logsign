@@ -1,10 +1,11 @@
-<%@ page import="java.sql.*,java.net.URI,java.util.*,java.sql.Connection"  %>
+<%@ page import="java.sql.*,java.net.URI,java.util.*,java.net.URISyntaxException"  %>
 <html>
 <body>
 <h1> Thank You for Using our apps</h1>
 <%
-            
-	        
+String id1 = request.getParameter("login");
+String pass1 = request.getParameter("password");
+/*
 	        Connection conn = null;
 	        ResultSet rs=null;
     try
@@ -28,15 +29,25 @@
       e.printStackTrace();
       System.exit(2);
     }
-	        
-	        
+	*/
+	URI dbUri = new URI(System.getenv("postgres://ckkyrhcwefetgz:pEHeAaHXoXx4nX2KlkHwcKwKKz@ec2-54-83-17-8.compute-1.amazonaws.com:5432/dcfvedpe24akom"));
+
+    String username = dbUri.getUserInfo().split(":")[0];
+    String password = dbUri.getUserInfo().split(":")[1];
+    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+     Connection conn= DriverManager.getConnection(dbUrl, username, password);
+
+	         Statement stmt = conn.createStatement();
+	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
+	        stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
+	        stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
+	        rs = stmt.executeQuery("SELECT * FROM logindetails");
 	        
 	        
 	            
 	       
 
-String id1 = request.getParameter("login");
-String pass1 = request.getParameter("password");
 
 //response.sendRedirect("/CR?token=" + URLEncoder.encode(token, "UTF-8"));
 
