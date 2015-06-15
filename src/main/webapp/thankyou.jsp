@@ -57,7 +57,9 @@ String pass1 = request.getParameter("password");
 response.sendRedirect("/thankyou1.jsp");
 
 	            }else{
-	            	response.sendRedirect("/error.jsp");
+	            out.println("id is"+id1);
+	            out.println("pass is"+pass1);
+	            	//response.sendRedirect("/error.jsp");
 
 
 	            	}
