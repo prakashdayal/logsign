@@ -42,7 +42,7 @@ String pass1 = request.getParameter("password");
 	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
 	        stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
 	        stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
-	        rs = stmt.executeQuery("SELECT * FROM logindetails");
+	       ResultSet rs = stmt.executeQuery("SELECT * FROM logindetails");
 	        
 	        
 	            
