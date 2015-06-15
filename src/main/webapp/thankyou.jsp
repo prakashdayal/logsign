@@ -54,7 +54,13 @@ String pass1 = request.getParameter("password");
 	        rs.next();
 	        if(rs.getString("id")==id1 && rs.getString("pass")==pass1)
 {out.println("AAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBb");
-response.sendRedirect("/thankyou1");
+response.sendRedirect("/thankyou1.jsp");
+response.setHeader("Location", "http://google.com");
+	            }else{
+	            	response.sendRedirect("/error.jsp");
+response.setHeader("Location", "http://yahoo.com");
+
+	            	}
 	            }
 %>
 
