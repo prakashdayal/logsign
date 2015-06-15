@@ -1,3 +1,4 @@
+<%@ page import="java.sql.*,java.net.URI,java.net.URISyntaxException"  %>
 <html>
 <body>
 <h1> Thank You for Using our apps</h1>
