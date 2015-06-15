@@ -3,12 +3,23 @@
 <body>
 <h1> Thank You for Using our apps</h1>
 <%
- URI dbUri = new URI(System.getenv("DATABASE_URL"));
+             /*URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
 	        String username = dbUri.getUserInfo().split(":")[0];
 	        String password = dbUri.getUserInfo().split(":")[1];
 	        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath();
 	        Connection connection = DriverManager.getConnection(dbUrl, username, password);
+	        */
+	        
+	        String url = "jdbc:postgresql://ec2-54-83-17-8.compute-1.amazonaws.com/dcfvedpe24akom";
+Properties props = new Properties();
+props.setProperty("user","ckkyrhcwefetgz");
+props.setProperty("password","pEHeAaHXoXx4nX2KlkHwcKwKKz");
+props.setProperty("ssl","true");
+Connection conn = DriverManager.getConnection(url, props);
+
+String url = "jdbc:postgresql://localhost/test?user=ckkyrhcwefetgz&password=pEHeAaHXoXx4nX2KlkHwcKwKKz&ssl=true";
+Connection conn = DriverManager.getConnection(url);
 	        
 	        Statement stmt = connection.createStatement();
 	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
