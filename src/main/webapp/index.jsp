@@ -23,7 +23,7 @@
             Remember me on this computer
           </label>
         </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+        <p class="submit"><input type="submit" name="commit" value="Login"><a href="signup.jsp">SignUp</a></p>
       </form>
     </div>
 
