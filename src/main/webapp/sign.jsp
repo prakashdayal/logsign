@@ -1,3 +1,5 @@
+<%@ page import="java.sql.*,java.net.URI,java.util.*,java.net.URISyntaxException"  %>
+
 <%
 String id1 = request.getParameter("login");
 String pass1 = request.getParameter("password");
