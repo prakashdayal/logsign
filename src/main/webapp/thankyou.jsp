@@ -52,6 +52,9 @@ String pass1 = request.getParameter("password");
 //response.sendRedirect("/CR?token=" + URLEncoder.encode(token, "UTF-8"));
 
 	        rs.next();
+	        out.println("1111"+rs.getString("id"));
+	         out.println("2222"+rs.getString("id"));
+	       
 	        if(rs.getString("id")==id1 && rs.getString("pass")==pass1)
 {out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBB");
 response.sendRedirect("/thankyou1.jsp");
