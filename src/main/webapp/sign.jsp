@@ -13,8 +13,8 @@ String name1 = request.getParameter("name");
 	         Statement stmt = conn.createStatement();
 	        stmt.executeUpdate("DROP TABLE IF EXISTS userdetails");
 	        stmt.executeUpdate("CREATE TABLE userdetails (name varchar(30),id varchar(30),pass varchar(20))");
-	        stmt.executeUpdate("INSERT INTO userdetails  VALUES (name1,id1,pass1)");
-	       
+	        stmt.executeUpdate("INSERT INTO userdetails(name,id,pass)  VALUES ('"+name1+"','"+id1+"','"+pass1+"')");
+	        
 	            	response.sendRedirect("/index.jsp");
 	           
 	            
