@@ -53,17 +53,17 @@ String pass1 = request.getParameter("password");
 
 	        rs.next();
 	        
-	        out.println("1111"+rs.getString("id"));
-	         out.println("2222"+rs.getString("pass"));
+	       // out.println("1111"+rs.getString("id"));
+	        // out.println("2222"+rs.getString("pass"));
 	       
 	        if(rs.getString("id").equals(id1) && rs.getString("pass").equals(pass1))
-{out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBB");
-response.sendRedirect("/thankyou1.jsp");
+{//out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBB");
+//response.sendRedirect("/thankyou.jsp");
 
 	            }else{
 	            out.println("id is"+id1);
 	            out.println("pass is"+pass1);
-	            	//response.sendRedirect("/error.jsp");
+	            	response.sendRedirect("/error.jsp");
 
 
 	            	}
