@@ -39,34 +39,27 @@ String pass1 = request.getParameter("password");
      Connection conn= DriverManager.getConnection(dbUrl, username, password);
 
 	         Statement stmt = conn.createStatement();
-	        stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
-	        stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
-	        stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
-	       ResultSet rs = stmt.executeQuery("SELECT * FROM logindetails");
+	        //stmt.executeUpdate("DROP TABLE IF EXISTS logindetails");
+	       // stmt.executeUpdate("CREATE TABLE logindetails (id varchar(30),pass varchar(20))");
+	        //stmt.executeUpdate("INSERT INTO logindetails VALUES ('prakash','dayal')");
+	       ResultSet rs = stmt.executeQuery("SELECT * FROM userdetails");
 	        
 	        
 	            
 	       
 
-
-//response.sendRedirect("/CR?token=" + URLEncoder.encode(token, "UTF-8"));
-
-	        rs.next();
+	        while(rs.next()){
 	        
-	       // out.println("1111"+rs.getString("id"));
-	        // out.println("2222"+rs.getString("pass"));
 	       
 	        if(rs.getString("id").equals(id1) && rs.getString("pass").equals(pass1))
-{//out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBB");
-//response.sendRedirect("/thankyou.jsp");
+                                           {
+                                        	response.sendRedirect("/thankyou1.jsp");
 
-	            }else{
-	            out.println("id is"+id1);
-	            out.println("pass is"+pass1);
-	            	response.sendRedirect("/error.jsp");
+                                             }
+	                    	}
+	                    	
+	                    		response.sendRedirect("/error.jsp");
 
-
-	            	}
 	            
 %>
 
