@@ -2,7 +2,7 @@
 <html>
 	
 <head>
-	<title>The Login-Animated Website Template | Home :: w3layouts</title>
+	<title> Home :: w3layouts</title>
 		<meta charset="utf-8">
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
 		
