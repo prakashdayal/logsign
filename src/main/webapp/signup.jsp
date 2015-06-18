@@ -8,27 +8,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Signup Form</title>
   <link rel="stylesheet" href="css/style.css">
-  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+ <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+		<!--//webfonts-->
 </head>
 <body>
-  <section class="container">
-    <div class="login">
-      <h1>SignUp to Web App</h1>
-      <form method="post" action="sign.jsp">
+  <div class="login-form">
+						<h1>Create Account</h1>
+					
+				<form method="post" action="sign.jsp">
 
-        <p><input type="text" name="name" value="" placeholder="Name"></p>
+<li><input type="text" name="name" value="" placeholder="Name"></li>
         
 
-        <p><input type="text" name="login" value="" placeholder=" Email"></p>
-        <p><input type="password" name="password" value="" placeholder="Password"></p>
-        
-        <p class="submit"><input type="submit" name="commit" value="SignUp"></p>
+					<li>
+						<input type="text" name="login" class="text" value="User Name or Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" ><a href="#" class=" icon user"></a>
+					</li>
+					<li>
+						<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon lock"></a>
+					</li>
+					
+        <div class ="forgot">
+        <input type="submit" onclick="myFunction()" value="Sign In" > <a href="#" class=" icon arrow"></a>                                                                                                                                                                                                                                 </h4>
+</div>
       </form>
     </div>
-
-    
-  </section>
-
  
 </body>
 </html>
