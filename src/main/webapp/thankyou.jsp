@@ -29,7 +29,7 @@ String pass1 = request.getParameter("password");
 	       
 	        if(rs.getString("id").equals(id1) && rs.getString("pass").equals(pass1))
                                            {
-                                        	response.sendRedirect("/thankyou1.jsp");
+                                        	response.sendRedirect("/mainpage.jsp");
 
                                              }
 	                    	}
