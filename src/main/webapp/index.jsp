@@ -38,6 +38,49 @@ ul li{height:40px; margin:15px 0; list-style:none}
 </head>
 <body>
 
+
+
+
+<div class="form">
+<div class="header"><h2>Sign In</h2></div>
+<div class="login">
+<form method="post" action="thankyou.jsp">
+<ul>
+<li>
+<span class="un"><i class="fa fa-user"></i></span><input type="text" name="login" required class="text" placeholder="User Name Or Email"/></li>
+<li>
+<span class="un"><i class="fa fa-lock"></i></span><input type="password" name="password" required class="text" placeholder="User Password"/></li>
+<li>
+<input type="submit" value="LOGIN" class="btn">
+</li>
+<li><div class="span"><span class="ch"><input type="checkbox" id="r"> <label for="r">Remember Me</label> </span> <span class="ch"><a href="#">Forgot Password?</a></span></div></li>
+</ul>
+</form>
+<div class="social">
+
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Facebook
+</fb:login-button>
+<div id="status">
+</div>
+
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<div class="fb"><i class="fa fa-facebook-f"></i> &nbsp; Login With Facebook</div>
+</fb:login-button>
+<!--<a href="#"><div class="fb"><i class="fa fa-facebook-f"></i> &nbsp; Login With Facebook</div></a>-->
+<a href="#"><div class="tw"><i class="fa fa-twitter"></i> &nbsp;  Login With Twitter</div></a>
+
+
+
+</div>
+</div><br/>
+<div class="sign">
+<div class="need">Need new account ?</div>
+<div class="up"><a href="signup.jsp">Sign Up</a></div>
+</div>
+</div>
+
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -119,38 +162,5 @@ ul li{height:40px; margin:15px 0; list-style:none}
   }
 </script>
 
-
-
-
-<div class="form">
-<div class="header"><h2>Sign In</h2></div>
-<div class="login">
-<form method="post" action="thankyou.jsp">
-<ul>
-<li>
-<span class="un"><i class="fa fa-user"></i></span><input type="text" name="login" required class="text" placeholder="User Name Or Email"/></li>
-<li>
-<span class="un"><i class="fa fa-lock"></i></span><input type="password" name="password" required class="text" placeholder="User Password"/></li>
-<li>
-<input type="submit" value="LOGIN" class="btn">
-</li>
-<li><div class="span"><span class="ch"><input type="checkbox" id="r"> <label for="r">Remember Me</label> </span> <span class="ch"><a href="#">Forgot Password?</a></span></div></li>
-</ul>
-</form>
-<div class="social">
-
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-<div id="status">
-</div>
-
-</div>
-</div><br/>
-<div class="sign">
-<div class="need">Need new account ?</div>
-<div class="up"><a href="signup.jsp">Sign Up</a></div>
-</div>
-</div>
 </body>
 </html>
