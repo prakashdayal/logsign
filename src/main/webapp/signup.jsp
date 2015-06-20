@@ -52,9 +52,8 @@ ul li{height:40px; margin:15px 0; list-style:none}
 <li>
 <span class="un"><i class="fa fa-lock"></i></span><input type="password" name="password" required class="text" placeholder="User Password"/></li>
 <li>
-<input type="submit" value="LOGIN" class="btn">
+<input type="submit" value="SIGNUP" class="btn">
 </li>
-<li><div class="span"><span class="ch"><input type="checkbox" id="r"> <label for="r">Remember Me</label> </span> <span class="ch"><a href="#">Forgot Password?</a></span></div></li>
 </ul>
 </form>
 </div>
