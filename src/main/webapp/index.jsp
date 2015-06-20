@@ -138,6 +138,8 @@ ul li{height:40px; margin:15px 0; list-style:none}
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
+    window.location="https://eduwebsite.herokuapp.com/mainpage.jsp";
+
   });
 
   };
@@ -160,7 +162,7 @@ ul li{height:40px; margin:15px 0; list-style:none}
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
        // window.location.assign("mainpage.jsp");
-        window.location="https://eduwebsite.herokuapp.com/mainpage.jsp";
+        //window.location="https://eduwebsite.herokuapp.com/mainpage.jsp";
       
     });
   }
