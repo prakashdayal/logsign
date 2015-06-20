@@ -59,14 +59,13 @@ ul li{height:40px; margin:15px 0; list-style:none}
 <div class="social">
 
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">Facebook
-</fb:login-button>
-<div id="status">
-</div>
 
 
 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 <div class="fb"><i class="fa fa-facebook-f"></i> &nbsp; Login With Facebook</div>
+<div id="status">
+</div>
+
 </fb:login-button>
 <!--<a href="#"><div class="fb"><i class="fa fa-facebook-f"></i> &nbsp; Login With Facebook</div></a>-->
 <a href="#"><div class="tw"><i class="fa fa-twitter"></i> &nbsp;  Login With Twitter</div></a>
