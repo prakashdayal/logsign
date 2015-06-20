@@ -44,9 +44,9 @@ ul li{height:40px; margin:15px 0; list-style:none}
 <ul>
 <li>
 <span class="un"><i class="fa fa-user"></i></span><input type="text" name="name" required class="text" placeholder="Your Name "/></li>
-<li><span class="un"><i class="fa fa-user"></i></span><input class="text" type="radio" name="sex" value="male" checked>Male
+<li><input  type="radio" name="sex" value="male" checked>Male
 <br>
-<input type="radio" class="text" name="sex" value="female">Female</li>
+<input type="radio"  name="sex" value="female">Female</li>
 <li>
 <span class="un"><i class="fa fa-user"></i></span><input type="text" name="login" required class="text" placeholder="User Name Or Email"/></li>
 <li>
