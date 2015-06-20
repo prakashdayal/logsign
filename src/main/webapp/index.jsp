@@ -92,7 +92,7 @@ ul li{height:40px; margin:15px 0; list-style:none}
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+       testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -116,9 +116,9 @@ ul li{height:40px; margin:15px 0; list-style:none}
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '827315767352566,
+    appId      : '827315767352566',
+    channelUrl : 'https://eduwebsite.herokuapp.com',
     cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.2' // use version 2.2
   });
@@ -158,6 +158,8 @@ ul li{height:40px; margin:15px 0; list-style:none}
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+        window.location.assign("mainpage.jsp");
+      
     });
   }
 </script>
