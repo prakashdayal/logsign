@@ -38,9 +38,9 @@ ul li{height:40px; margin:15px 0; list-style:none}
 </head>
 <body>
 <div class="form">
-<div class="header"><h2>Sign In</h2></div>
+<div class="header"><h2>SignUp</h2></div>
 <div class="login">
-<form method="post" action="thankyou.jsp">
+<form method="post" action="sign.jsp">
 <ul>
 <li>
 <span class="un"><i class="fa fa-user"></i></span><input type="text" name="name" required class="text" placeholder="Your Name "/></li>
