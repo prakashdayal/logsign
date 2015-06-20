@@ -112,6 +112,8 @@ ul li{height:40px; margin:15px 0; list-style:none}
   function checkLoginState() {
     FB.getLoginStatus(function(response) {
       statusChangeCallback(response);
+       window.location="https://eduwebsite.herokuapp.com/mainpage.jsp";
+
     });
   }
 
@@ -138,8 +140,7 @@ ul li{height:40px; margin:15px 0; list-style:none}
 
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
-    window.location="https://eduwebsite.herokuapp.com/mainpage.jsp";
-
+   
   });
 
   };
